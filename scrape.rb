@@ -18,9 +18,8 @@ mech.links.each do |link|
       if page.has_css?("#phone-number-button")
         page.find("#phone-number-button").click
         doc = Nokogiri::HTML.parse(body)
-        puts "NIGGA DA NUMBER IS " + doc.css("#phone-number-button").text 
+        puts "THE NUMBER IS " + doc.css("#phone-number-button").text 
         mechanize_parse = agent.get("#{link.href}")
-
       end           
   end 
 end 
